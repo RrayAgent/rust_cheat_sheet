@@ -36,11 +36,18 @@ pub fn noticing_print_diff(){
 pub fn vars(){
     let first = 1;
     let sec:i32;
+    let (_u, mut _t, _h)=(12,"r", 12.6);
+    _t="y";
     sec=6;
+    //referencing is done through '&' (prevents re-assinging a variable (ownership safty) mostly when being moved between functions)
+    let r = &sec;
     //varieables may be explicetly or implicatly typed, 
     //if you do the latter keep in mind that first value you assign it will give it a constant type
     
     println!("{first},{sec}");
+
+    let i = sec;
+    println!("{r}, {i}");
     //proper intro to scopes with shadowing
     {
         //all vars created in this section are trashed when section ends
