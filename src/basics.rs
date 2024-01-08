@@ -177,5 +177,22 @@ pub fn loops_funcs_and_ownership(){
             }
             i+=1;
         }
+        print!("\n");
     }
+    //functions
+    fnc();
+    //returns
+    let u = ret(String::from("ABCd"));
+    println!("{u}")
+}
+
+fn fnc(){
+    println!("from function")
+}
+
+fn ret(name: String)->bool{
+    if name.contains('d'){
+        return true
+    }
+    return false;
 }
