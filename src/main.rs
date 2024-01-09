@@ -1,3 +1,5 @@
+use crate::advanced::is_adult;
+
 /*
 to make an directory enter the cmd/power shell/terminal where you want the folder to appear
 write : cargo new [file_type] [name for file]
@@ -16,10 +18,19 @@ file_types (or at least the most used):
 */
 mod basics;
 //mod + name of file = local imports
-
+mod advanced;
 fn main() {
     //basics::print();
     //basics::noticing_print_diff();
     //basics::vars();
-    basics::loops_funcs_and_ownership()
+    //basics::loops_funcs_and_ownership();
+    let stru = advanced::Learner::new("David".to_string(),17, "python".to_string());
+    stru.structs_classes();
+    let d_stru = advanced::Learner::default();
+    println!("Are {0} and {1} adults", &d_stru.name, &stru.name);
+    if is_adult(&d_stru) && is_adult(&stru){
+        println!("{0} and {1} are adults", d_stru.name, stru.name);
+    }else{
+        println!("{0} and {1} are not adults", d_stru.name, stru.name);
+    }
 }
