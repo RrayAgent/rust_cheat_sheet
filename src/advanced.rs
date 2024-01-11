@@ -14,6 +14,8 @@ impl Learner{
             p_code:pc
         }
     }
+    /*if you use an instance of a struct in an implamented func if it isn't a reference
+     ownership will be transfered to the function*/
     pub fn structs_classes(&self){
         let n = &self.name;
         println!("hello {n}")

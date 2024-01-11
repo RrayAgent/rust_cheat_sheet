@@ -27,7 +27,7 @@ fn main() {
     let stru = advanced::Learner::new("David".to_string(),17, "python".to_string());
     stru.structs_classes();
     let d_stru = advanced::Learner::default();
-    println!("Are {0} and {1} adults", &d_stru.name, &stru.name);
+    println!("Are {0} and {1} adults", d_stru.name, stru.name);
     if is_adult(&d_stru) && is_adult(&stru){
         println!("{0} and {1} are adults", d_stru.name, stru.name);
     }else{
