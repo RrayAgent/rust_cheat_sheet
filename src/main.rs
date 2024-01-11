@@ -24,13 +24,14 @@ fn main() {
     //basics::noticing_print_diff();
     //basics::vars();
     //basics::loops_funcs_and_ownership();
-    let stru = advanced::Learner::new("David".to_string(),17, "python".to_string());
+    let stru = advanced::Learner::new("David".to_string(),18, "python".to_string());
     stru.structs_classes();
     let d_stru = advanced::Learner::default();
-    println!("Are {0} and {1} adults", d_stru.name, stru.name);
-    if is_adult(&d_stru) && is_adult(&stru){
-        println!("{0} and {1} are adults", d_stru.name, stru.name);
+    println!("{0} - {1}",&d_stru.name, &d_stru.age);
+    println!("Is {0} adults", stru.name);
+    if is_adult(&stru){
+        println!("{0} is adults", stru.name);
     }else{
-        println!("{0} and {1} are not adults", d_stru.name, stru.name);
+        println!("{0} is not adults", stru.name);
     }
 }
