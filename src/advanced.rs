@@ -1,3 +1,4 @@
+#[derive(Debug)]
 pub struct Learner{
     pub name:String,
     age:u32,

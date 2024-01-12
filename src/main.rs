@@ -36,5 +36,5 @@ fn main() {
     }
     //clone test
     let d_copy = d_stru.clone_from();
-    println!("{0}, {1}", d_stru.name, d_copy.name)
+    println!("{0:#?}, {1:#?}", d_stru, d_copy)
 }
