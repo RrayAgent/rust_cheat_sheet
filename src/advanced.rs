@@ -19,7 +19,7 @@ impl Learner{
         let n = &self.name;
         println!("hello {n}")
     }
-
+    //please remember this because it is annoying to clone otherwise
     pub fn clone_from(&self) -> Self{
         Learner::new(self.name.to_string(), self.age, self.p_code.to_string())
     }
