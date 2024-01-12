@@ -1,7 +1,7 @@
 pub struct Learner{
     pub name:String,
-    pub age:u32,
-    p_code:String
+    age:u32,
+    pub p_code:String
 }
 //you must define a structs vars with a hard type
 
