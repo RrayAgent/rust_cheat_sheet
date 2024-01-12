@@ -16,6 +16,7 @@ file_types (or at least the most used):
             cargo build = creates a debug library
             cargo build -r = creates a release library
 */
+//Just a note if you want to time execution time on windows in power shell it is Measure-Command {command_name}
 mod basics;
 //mod + name of file = local imports
 mod advanced;
@@ -34,7 +35,7 @@ fn main() {
     }else{
         println!("{0} is not adults", stru.name);
     }
-    //clone test
+    //cloning without re-assignment or memory leakage
     let d_copy = advanced::Learner::clone_from(&d_stru);
     println!("{0:#?}, {1:#?}", d_stru, d_copy)
 }

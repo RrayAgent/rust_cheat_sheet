@@ -37,6 +37,7 @@ impl Default for Learner{
     }
 }
 
+//how to define a trait, which can be impl in to any struct
 pub trait Cop {
     //please remember this because it is annoying to clone and make traits otherwise
     fn clone_from(learner:&Learner) -> Self;
