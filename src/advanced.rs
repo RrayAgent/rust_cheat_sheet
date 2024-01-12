@@ -20,10 +20,7 @@ impl Learner{
         let n = &self.name;
         println!("hello {n}")
     }
-    //please remember this because it is annoying to clone otherwise
-    pub fn clone_from(&self) -> Self{
-        Learner::new(self.name.to_string(), self.age, self.p_code.to_string())
-    }
+    
 }
 
 pub fn is_adult(age:&Learner)->bool{
@@ -37,5 +34,16 @@ pub fn is_adult(age:&Learner)->bool{
 impl Default for Learner{
     fn default() -> Self {
         Learner::new(String::from("Omaha"), 17, "C++".to_string())
+    }
+}
+
+pub trait Cop {
+    //please remember this because it is annoying to clone and make traits otherwise
+    fn clone_from(learner:&Learner) -> Self;
+}
+
+impl Cop for Learner{
+    fn clone_from(learner:&Learner) -> Self{
+        Learner::new(learner.name.to_string(), learner.age, learner.p_code.to_string())
     }
 }

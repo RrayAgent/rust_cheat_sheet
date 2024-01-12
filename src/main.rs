@@ -1,4 +1,4 @@
-use crate::advanced::is_adult;
+use crate::advanced::{is_adult, Cop};
 
 /*
 to make an directory enter the cmd/power shell/terminal where you want the folder to appear
@@ -35,6 +35,6 @@ fn main() {
         println!("{0} is not adults", stru.name);
     }
     //clone test
-    let d_copy = d_stru.clone_from();
+    let d_copy = advanced::Learner::clone_from(&d_stru);
     println!("{0:#?}, {1:#?}", d_stru, d_copy)
 }
