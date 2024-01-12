@@ -34,4 +34,7 @@ fn main() {
     }else{
         println!("{0} is not adults", stru.name);
     }
+
+    let d_copy = d_stru.clone_from();
+    println!("{0}, {1}", d_stru.name, d_copy.name)
 }

@@ -4,7 +4,6 @@ pub struct Learner{
     pub p_code:String
 }
 //you must define a structs vars with a hard type
-
 //use the impl key word before the name of your defined struct to create or assine functions to the struct
 impl Learner{
     pub fn new(n:String, a:u32,pc:String)->Self{
@@ -20,6 +19,10 @@ impl Learner{
         let n = &self.name;
         println!("hello {n}")
     }
+
+    pub fn clone_from(&self) -> Self{
+        Learner::new(self.name.to_string(), self.age, self.p_code.to_string())
+    }
 }
 
 pub fn is_adult(age:&Learner)->bool{
@@ -32,5 +35,6 @@ pub fn is_adult(age:&Learner)->bool{
 
 impl Default for Learner{
     fn default() -> Self {
-        Learner::new(String::from("Omaha"), 17, "C++".to_string())}
+        Learner::new(String::from("Omaha"), 17, "C++".to_string())
+    }
 }
