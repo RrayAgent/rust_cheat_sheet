@@ -40,5 +40,6 @@ fn main() {
     println!("{0:#?}, {1:#?}", d_stru, d_copy);
 //using libs implimented
     let k = advanced::using_libs();
-    println!("{}", k.len())
+    println!("{}", k.len());
+    advanced::running_parralle(23)
 }

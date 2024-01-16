@@ -62,3 +62,24 @@ pub fn using_libs()->Vec<i32>{
     }
     return t
 }
+
+//treading
+use std::{thread, time::Duration};
+pub fn running_parralle(o:i32){
+    let mut hand = vec![];
+    for i in 0..8{
+        
+        let handl = thread::spawn(move|| {
+            for j in 0..(o){
+                println!("{}",j/(i+1));
+                thread::sleep(Duration::from_secs(1));
+            };
+        });
+        hand.push(handl)
+        
+    }
+
+    for h in hand{
+        h.join().expect("dead")
+    }
+}
