@@ -31,6 +31,7 @@ pub fn is_adult(age:&Learner)->bool{
     }
 }
 
+//how to implement the trait
 impl Default for Learner{
     fn default() -> Self {
         Learner::new(String::from("Omaha"), 17, "C++".to_string())
@@ -47,4 +48,17 @@ impl Cop for Learner{
     fn clone_from(learner:&Learner) -> Self{
         Learner::new(learner.name.to_string(), learner.age, learner.p_code.to_string())
     }
+}
+
+//now for the final big thing to learn importing
+//to import a library go to the .toml file write, "[package_name] = '[version # or * for most resent]"'
+extern crate rand;
+use rand::Rng;
+pub fn using_libs()->Vec<i32>{
+    let mut y = rand::thread_rng();
+    let mut t: Vec<i32>=Vec::new();
+    for _i in 0..90{
+        t.push(y.gen::<i32>())
+    }
+    return t
 }
