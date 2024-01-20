@@ -39,7 +39,13 @@ fn main() {
     let d_copy = advanced::Learner::clone_from(&d_stru);
     println!("{0:#?}, {1:#?}", d_stru, d_copy);
 //using libs implimented
-    let k = advanced::using_libs();
+    /*let k = advanced::using_libs();
     println!("{}", k.len());
-    advanced::running_parralle(23)
+    advanced::running_parralle(23);*/
+    let y = vec![42,21,67];
+    let mut max =y[0];
+    for i in 0..y.len()-1{
+        max = y[i].max(y[i+1])
+    }
+    println!("max = {max}")
 }
