@@ -54,6 +54,7 @@ impl Cop for Learner{
 //to import a library go to the .toml file write, "[package_name] = '[version # or * for most resent]"'
 extern crate rand;
 use rand::Rng;
+#[allow(dead_code)]
 pub fn using_libs()->Vec<i32>{
     let mut y = rand::thread_rng();
     let mut t: Vec<i32>=Vec::new();
@@ -65,6 +66,7 @@ pub fn using_libs()->Vec<i32>{
 
 //treading
 use std::{thread, time::Duration};
+#[allow(dead_code)]
 pub fn running_parralle(o:i32){
     let mut hand = vec![];
     for i in 0..8{

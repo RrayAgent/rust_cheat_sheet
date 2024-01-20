@@ -45,7 +45,8 @@ fn main() {
     let y = vec![42,21,67];
     let mut max =y[0];
     for i in 0..y.len()-1{
-        max = y[i].max(y[i+1])
+        max = y[i].max(y[i+1]);
+        println!("{max}")
     }
     println!("max = {max}")
 }
